@@ -18,20 +18,20 @@
   
   
   <title>if-else优化方案 | 写代码的厨子👨‍🍳</title>
-  <meta name="description" content="【代码优化】if-else代码优化方案 优化方案一：提前return，去除不必要的else  如果if-else代码块包含return语句，可以考虑通过提前return，把多余else干掉，使代码更加优雅。 123456789101112&#x2F;&#x2F;---------优化前---------if(condition)&amp;#123;  &#x2F;&#x2F;do something...&amp;#125;else&amp;#123;  re">
+  <meta name="description" content="优化方案一：提前return，去除不必要的else如果if-else代码块包含return语句，可以考虑通过提前return，把多余else干掉，使代码更加优雅。 123456789101112&#x2F;&#x2F;---------优化前---------if(condition)&amp;#123;  &#x2F;&#x2F;do something...&amp;#125;else&amp;#123;  return;&amp;#125;&#x2F;&#x2F;---------">
 <meta property="og:type" content="article">
 <meta property="og:title" content="if-else优化方案">
-<meta property="og:url" content="http://sunary.site/m-hexo-blog/2022/03/08/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:url" content="http://sunary.site/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="写代码的厨子">
-<meta property="og:description" content="【代码优化】if-else代码优化方案 优化方案一：提前return，去除不必要的else  如果if-else代码块包含return语句，可以考虑通过提前return，把多余else干掉，使代码更加优雅。 123456789101112&#x2F;&#x2F;---------优化前---------if(condition)&amp;#123;  &#x2F;&#x2F;do something...&amp;#125;else&amp;#123;  re">
+<meta property="og:description" content="优化方案一：提前return，去除不必要的else如果if-else代码块包含return语句，可以考虑通过提前return，把多余else干掉，使代码更加优雅。 123456789101112&#x2F;&#x2F;---------优化前---------if(condition)&amp;#123;  &#x2F;&#x2F;do something...&amp;#125;else&amp;#123;  return;&amp;#125;&#x2F;&#x2F;---------">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-08T10:11:27.000Z">
-<meta property="article:modified_time" content="2022-03-08T10:13:01.897Z">
+<meta property="article:modified_time" content="2022-03-08T10:20:52.161Z">
 <meta property="article:author" content="sunary">
 <meta property="article:tag" content="【代码优化】">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://sunary.site/m-hexo-blog/2022/03/08/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/index.html">
+  <link rel="canonical" href="http://sunary.site/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/index.html">
   
     <link rel="alternate" href="/atom.xml" title="写代码的厨子" type="application/atom+xml">
   
@@ -213,7 +213,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/m-hexo-blog/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/m-hexo-blog/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -223,7 +223,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/m-hexo-blog/tags/Music%E5%88%86%E4%BA%AB/" rel="tag">Music分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/m-hexo-blog/tags/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91/" rel="tag">【代码优化】</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/m-hexo-blog/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/m-hexo-blog/tags/%E6%94%BF%E6%B2%BB%E7%94%9F%E6%B4%BB/" rel="tag">政治生活</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/m-hexo-blog/tags/Music%E5%88%86%E4%BA%AB/" rel="tag">Music分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/m-hexo-blog/tags/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91/" rel="tag">【代码优化】</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/m-hexo-blog/tags/%E3%80%90%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91/" rel="tag">【瞎捣鼓】</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -233,7 +233,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/m-hexo-blog/tags/Music%E5%88%86%E4%BA%AB/" style="font-size: 13px;">Music分享</a> <a href="/m-hexo-blog/tags/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91/" style="font-size: 13px;">【代码优化】</a> <a href="/m-hexo-blog/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 13px;">技术</a> <a href="/m-hexo-blog/tags/%E6%94%BF%E6%B2%BB%E7%94%9F%E6%B4%BB/" style="font-size: 13px;">政治生活</a>
+      <a href="/m-hexo-blog/tags/Music%E5%88%86%E4%BA%AB/" style="font-size: 13px;">Music分享</a> <a href="/m-hexo-blog/tags/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91/" style="font-size: 13px;">【代码优化】</a> <a href="/m-hexo-blog/tags/%E3%80%90%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91/" style="font-size: 13px;">【瞎捣鼓】</a>
     </div>
   </div>
 
@@ -242,7 +242,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/m-hexo-blog/archives/2022/03/">三月 2022</a><span class="archive-list-count">7</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/m-hexo-blog/archives/2022/03/">三月 2022</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -261,7 +261,7 @@
                 <a class="category-link" href="/m-hexo-blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
               </p>
               <p class="item-title">
-                <a href="/m-hexo-blog/2022/03/08/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="title">if-else优化方案</a>
+                <a href="/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="title">if-else优化方案</a>
               </p>
               <p class="item-date">
                 <time datetime="2022-03-08T10:11:27.000Z" itemprop="datePublished">2022-03-08</time>
@@ -273,25 +273,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/m-hexo-blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
               </p>
               <p class="item-title">
-                <a href="/m-hexo-blog/2022/03/08/%E5%8D%81%E5%9B%9B%E4%BA%94%E8%A7%84%E5%88%92%E4%BC%9A%E8%AE%AE/" class="title">十四五规划会议</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-03-08T03:05:30.000Z" itemprop="datePublished">2022-03-08</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/m-hexo-blog/2022/03/08/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" class="title">博客部署</a>
+                <a href="/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" class="title">博客部署</a>
               </p>
               <p class="item-date">
                 <time datetime="2022-03-08T02:33:16.000Z" itemprop="datePublished">2022-03-08</time>
@@ -306,10 +291,10 @@
                 
               </p>
               <p class="item-title">
-                <a href="/m-hexo-blog/2022/03/07/git%E9%83%A8%E7%BD%B2%E6%B5%8B%E8%AF%95/" class="title">git部署测试</a>
+                <a href="/m-hexo-blog/2022/03/07/%E9%94%99%E4%BD%8D%E6%97%B6%E7%A9%BA/" class="title">错位时空</a>
               </p>
               <p class="item-date">
-                <time datetime="2022-03-07T10:46:32.000Z" itemprop="datePublished">2022-03-07</time>
+                <time datetime="2022-03-07T03:17:00.000Z" itemprop="datePublished">2022-03-07</time>
               </p>
             </div>
           </li>
@@ -321,10 +306,10 @@
                 
               </p>
               <p class="item-title">
-                <a href="/m-hexo-blog/2022/03/07/Test/" class="title">Test</a>
+                <a href="/m-hexo-blog/2022/03/04/hello-world/" class="title">Hello World</a>
               </p>
               <p class="item-date">
-                <time datetime="2022-03-07T06:03:34.000Z" itemprop="datePublished">2022-03-07</time>
+                <time datetime="2022-03-04T10:11:33.882Z" itemprop="datePublished">2022-03-04</time>
               </p>
             </div>
           </li>
@@ -342,7 +327,7 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-【代码优化】if-else优化方案" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-【技术-代码优化】if-else优化方案" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
@@ -357,7 +342,7 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/m-hexo-blog/2022/03/08/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="article-date">
+	<a href="/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="article-date">
 	  <time datetime="2022-03-08T10:11:27.000Z" itemprop="datePublished">2022-03-08</time>
 	</a>
 </span>
@@ -383,46 +368,25 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/m-hexo-blog/2022/03/08/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h4 id="【代码优化】if-else代码优化方案"><a href="#【代码优化】if-else代码优化方案" class="headerlink" title="【代码优化】if-else代码优化方案"></a>【代码优化】if-else代码优化方案</h4><blockquote>
-<p>优化方案一：提前return，去除不必要的else</p>
-</blockquote>
-<p>如果if-else代码块包含return语句，可以考虑通过提前return，把多余else干掉，使代码更加优雅。</p>
+        <h4 id="优化方案一：提前return，去除不必要的else"><a href="#优化方案一：提前return，去除不必要的else" class="headerlink" title="优化方案一：提前return，去除不必要的else"></a>优化方案一：提前return，去除不必要的else</h4><p>如果if-else代码块包含return语句，可以考虑通过提前return，把多余else干掉，使代码更加优雅。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line">  <span class="comment">//do something...</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化后---------</span></span><br><span class="line"><span class="keyword">if</span>(!condition)&#123;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//do something</span></span><br></pre></td></tr></table></figure>
 <hr>
-<blockquote>
-<p>优化方案二：使用三目运算符</p>
-</blockquote>
-<p>使用三目运算符可以简化某些if-else,使代码更加简洁，更具有可读性。</p>
+<h4 id="优化方案二：使用三目运算符"><a href="#优化方案二：使用三目运算符" class="headerlink" title="优化方案二：使用三目运算符"></a>优化方案二：使用三目运算符</h4><p>使用三目运算符可以简化某些if-else,使代码更加简洁，更具有可读性。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化后---------</span></span><br><span class="line"><span class="keyword">return</span> condition ? <span class="number">1</span>:<span class="number">2</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
-<blockquote>
-<p>优化方案三: 使用枚举</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line">String OrderStatusDes;</span><br><span class="line"><span class="keyword">if</span>(orderStatus==<span class="number">0</span>)&#123;</span><br><span class="line">    OrderStatusDes =<span class="string">&quot;订单未支付&quot;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(OrderStatus==<span class="number">1</span>)&#123;</span><br><span class="line">    OrderStatusDes =<span class="string">&quot;订单已支付&quot;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(OrderStatus==<span class="number">2</span>)&#123;</span><br><span class="line">   OrderStatusDes =<span class="string">&quot;已发货&quot;</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化后---------</span></span><br><span class="line"><span class="comment">//先定义枚举类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">OrderStatusEnum</span> &#123;</span><br><span class="line">    UNPAID(<span class="number">0</span>,<span class="string">&quot;订单未支付&quot;</span>),</span><br><span class="line">    PAIDED(<span class="number">1</span>,<span class="string">&quot;订单已支付&quot;</span>),</span><br><span class="line">    SENDED(<span class="number">2</span>,<span class="string">&quot;已发货&quot;</span>)</span><br><span class="line">    ;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> index;</span><br><span class="line">    <span class="keyword">private</span> String desc;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getIndex</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getDesc</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    OrderStatusEnum(<span class="type">int</span> index, String desc)&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.desc =desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    OrderStatusEnum <span class="title function_">of</span><span class="params">(<span class="type">int</span> orderStatus)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (OrderStatusEnum temp : OrderStatusEnum.values()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp.getIndex() == orderStatus) &#123;</span><br><span class="line">                <span class="keyword">return</span> temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//有了枚举之后，以上if-else逻辑分支，可以优化为一行代码</span></span><br><span class="line"><span class="type">String</span> <span class="variable">OrderStatusDes</span> <span class="operator">=</span> OrderStatusEnum.of(orderStatus).getDesc();</span><br></pre></td></tr></table></figure>
+<h4 id="优化方案三-使用枚举"><a href="#优化方案三-使用枚举" class="headerlink" title="优化方案三: 使用枚举"></a>优化方案三: 使用枚举</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line">String OrderStatusDes;</span><br><span class="line"><span class="keyword">if</span>(orderStatus==<span class="number">0</span>)&#123;</span><br><span class="line">    OrderStatusDes =<span class="string">&quot;订单未支付&quot;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(OrderStatus==<span class="number">1</span>)&#123;</span><br><span class="line">    OrderStatusDes =<span class="string">&quot;订单已支付&quot;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(OrderStatus==<span class="number">2</span>)&#123;</span><br><span class="line">   OrderStatusDes =<span class="string">&quot;已发货&quot;</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化后---------</span></span><br><span class="line"><span class="comment">//先定义枚举类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">OrderStatusEnum</span> &#123;</span><br><span class="line">    UNPAID(<span class="number">0</span>,<span class="string">&quot;订单未支付&quot;</span>),</span><br><span class="line">    PAIDED(<span class="number">1</span>,<span class="string">&quot;订单已支付&quot;</span>),</span><br><span class="line">    SENDED(<span class="number">2</span>,<span class="string">&quot;已发货&quot;</span>)</span><br><span class="line">    ;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> index;</span><br><span class="line">    <span class="keyword">private</span> String desc;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getIndex</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getDesc</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    OrderStatusEnum(<span class="type">int</span> index, String desc)&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.desc =desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    OrderStatusEnum <span class="title function_">of</span><span class="params">(<span class="type">int</span> orderStatus)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (OrderStatusEnum temp : OrderStatusEnum.values()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (temp.getIndex() == orderStatus) &#123;</span><br><span class="line">                <span class="keyword">return</span> temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//有了枚举之后，以上if-else逻辑分支，可以优化为一行代码</span></span><br><span class="line"><span class="type">String</span> <span class="variable">OrderStatusDes</span> <span class="operator">=</span> OrderStatusEnum.of(orderStatus).getDesc();</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>优化方案四: 使用 Optional</p>
-</blockquote>
-<p>有时候if-else比较多，是因为非空判断导致的，这时候你可以使用java8的Optional进行优化。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;xxxxx&quot;</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">null</span> != str) &#123;</span><br><span class="line">	doAction(str);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	doAction1();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化后---------</span></span><br><span class="line">Optional&lt;String&gt; strOptional = Optional.of(<span class="string">&quot;xxxxx&quot;</span>);</span><br><span class="line">strOptional.ifPresentOrElse(doAction(strOptional.get()), () -&gt; doAction1());</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>优化方案五: 表驱动法</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line"><span class="keyword">if</span> (param.equals(value1)) &#123;</span><br><span class="line">    doAction1(someParams);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (param.equals(value2)) &#123;</span><br><span class="line">    doAction2(someParams);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (param.equals(value3)) &#123;</span><br><span class="line">    doAction3(someParams);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line">Map&lt;?, Function&lt;?&gt; action&gt; actionMappings = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;(); <span class="comment">// 这里泛型 是为方便演示，实际可替换为你需要的类型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line">actionMappings.put(value1, (someParams) -&gt; &#123; doAction1(someParams)&#125;);</span><br><span class="line">actionMappings.put(value2, (someParams) -&gt; &#123; doAction2(someParams)&#125;);</span><br><span class="line">actionMappings.put(value3, (someParams) -&gt; &#123; doAction3(someParams)&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 省略多余逻辑语句</span></span><br><span class="line">actionMappings.get(param).apply(someParams);</span><br></pre></td></tr></table></figure>
+<h4 id="优化方案四-使用-Optional"><a href="#优化方案四-使用-Optional" class="headerlink" title="优化方案四: 使用 Optional"></a>优化方案四: 使用 Optional</h4><p>有时候if-else比较多，是因为非空判断导致的，这时候你可以使用java8的Optional进行优化。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;xxxxx&quot;</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">null</span> != str) &#123;</span><br><span class="line">	doAction(str);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	doAction1();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化后---------</span></span><br><span class="line">Optional&lt;String#### strOptional = Optional.of(<span class="string">&quot;xxxxx&quot;</span>);</span><br><span class="line">strOptional.ifPresentOrElse(doAction(strOptional.get()), () -#### doAction1());</span><br></pre></td></tr></table></figure>
+<h4 id="优化方案五-表驱动法"><a href="#优化方案五-表驱动法" class="headerlink" title="优化方案五: 表驱动法"></a>优化方案五: 表驱动法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line"><span class="keyword">if</span> (param.equals(value1)) &#123;</span><br><span class="line">    doAction1(someParams);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (param.equals(value2)) &#123;</span><br><span class="line">    doAction2(someParams);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (param.equals(value3)) &#123;</span><br><span class="line">    doAction3(someParams);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------优化前---------</span></span><br><span class="line">Map&lt;?, Function&lt;?#### action#### actionMappings = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;####(); <span class="comment">// 这里泛型 是为方便演示，实际可替换为你需要的类型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line">actionMappings.put(value1, (someParams) -#### &#123; doAction1(someParams)&#125;);</span><br><span class="line">actionMappings.put(value2, (someParams) -#### &#123; doAction2(someParams)&#125;);</span><br><span class="line">actionMappings.put(value3, (someParams) -#### &#123; doAction3(someParams)&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 省略多余逻辑语句</span></span><br><span class="line">actionMappings.get(param).apply(someParams);</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-</blockquote>
-<blockquote>
-</blockquote>
-<blockquote>
-</blockquote>
-<h4 id="com-ipaylinks-unified-transaction-service-template-ump-AbstractUmpChannelTransactionService-doConfirm"><a href="#com-ipaylinks-unified-transaction-service-template-ump-AbstractUmpChannelTransactionService-doConfirm" class="headerlink" title="com.ipaylinks.unified.transaction.service.template.ump.AbstractUmpChannelTransactionService#doConfirm"></a>com.ipaylinks.unified.transaction.service.template.ump.AbstractUmpChannelTransactionService#doConfirm</h4>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><h4 id="-2"><a href="#-2" class="headerlink" title=""></a></h4><h4 id="com-ipaylinks-unified-transaction-service-template-ump-AbstractUmpChannelTransactionService-doConfirm"><a href="#com-ipaylinks-unified-transaction-service-template-ump-AbstractUmpChannelTransactionService-doConfirm" class="headerlink" title="com.ipaylinks.unified.transaction.service.template.ump.AbstractUmpChannelTransactionService#doConfirm"></a>com.ipaylinks.unified.transaction.service.template.ump.AbstractUmpChannelTransactionService#doConfirm</h4>
       
     </div>
     <div class="article-footer">
@@ -431,7 +395,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://sunary.site/m-hexo-blog/2022/03/08/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" title="if-else优化方案" target="_blank" rel="external">http://sunary.site/m-hexo-blog/2022/03/08/【代码优化】if-else优化方案/</a>
+      <a href="http://sunary.site/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" title="if-else优化方案" target="_blank" rel="external">http://sunary.site/m-hexo-blog/2022/03/08/【技术-代码优化】if-else优化方案/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -479,7 +443,7 @@
     
     
     <li class="next">
-      <a href="/m-hexo-blog/2022/03/08/%E5%8D%81%E5%9B%9B%E4%BA%94%E8%A7%84%E5%88%92%E4%BC%9A%E8%AE%AE/" title="十四五规划会议"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" title="博客部署"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
