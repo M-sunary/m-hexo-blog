@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sunary.site/m-hexo-blog/public/2022/03/07/git%E9%83%A8%E7%BD%B2%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://sunary.site/m-hexo-blog/2022/03/07/git%E9%83%A8%E7%BD%B2%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2022-03-07</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://sunary.site/m-hexo-blog/public/2022/03/07/Test/</loc>
+    <loc>http://sunary.site/m-hexo-blog/2022/03/07/Test/</loc>
     
     <lastmod>2022-03-07</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://sunary.site/m-hexo-blog/public/2022/03/07/%E9%94%99%E4%BD%8D%E6%97%B6%E7%A9%BA/</loc>
+    <loc>http://sunary.site/m-hexo-blog/2022/03/07/%E9%94%99%E4%BD%8D%E6%97%B6%E7%A9%BA/</loc>
     
     <lastmod>2022-03-07</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://sunary.site/m-hexo-blog/public/2022/03/04/hello-world/</loc>
+    <loc>http://sunary.site/m-hexo-blog/2022/03/04/hello-world/</loc>
     
     <lastmod>2022-03-04</lastmod>
     
@@ -39,8 +39,8 @@
   
 
   <url>
-    <loc>http://sunary.site/m-hexo-blog/public</loc>
-    <lastmod>2022-03-07</lastmod>
+    <loc>http://sunary.site/m-hexo-blog</loc>
+    <lastmod>2022-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
