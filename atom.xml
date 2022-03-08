@@ -6,7 +6,7 @@
   <link href="http://sunary.site/m-hexo-blog/atom.xml" rel="self"/>
   
   <link href="http://sunary.site/m-hexo-blog/"/>
-  <updated>2022-03-07T10:46:32.092Z</updated>
+  <updated>2022-03-08T02:33:16.928Z</updated>
   <id>http://sunary.site/m-hexo-blog/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客部署</title>
+    <link href="http://sunary.site/m-hexo-blog/2022/03/08/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/"/>
+    <id>http://sunary.site/m-hexo-blog/2022/03/08/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</id>
+    <published>2022-03-08T02:33:16.000Z</published>
+    <updated>2022-03-08T02:33:16.928Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>git部署测试</title>
