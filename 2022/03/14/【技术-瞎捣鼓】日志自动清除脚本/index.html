@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签: 【代码优化】 | 写代码的厨子👨‍🍳</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="写代码的厨子">
-<meta property="og:url" content="http://sunary.site/m-hexo-blog/tags/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91/index.html">
+  <title>日志自动清除脚本 | 写代码的厨子👨‍🍳</title>
+  <meta name="description" content="1、编辑sh脚本  12345678910111213#!&#x2F;bin&#x2F;bashsearchPath&#x3D;&#x2F;home&#x2F;catherine&#x2F;data&#x2F;logs&#x2F;push-order-servicecd $&amp;#123;searchPath&amp;#125;declare -i total&#x3D;&#96;ls push-order-service-qa-*.log | wc -l&#96;declare -i nums&#x3D;$total-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日志自动清除脚本">
+<meta property="og:url" content="http://sunary.site/m-hexo-blog/2022/03/14/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91%E6%97%A5%E5%BF%97%E8%87%AA%E5%8A%A8%E6%B8%85%E9%99%A4%E8%84%9A%E6%9C%AC/index.html">
 <meta property="og:site_name" content="写代码的厨子">
+<meta property="og:description" content="1、编辑sh脚本  12345678910111213#!&#x2F;bin&#x2F;bashsearchPath&#x3D;&#x2F;home&#x2F;catherine&#x2F;data&#x2F;logs&#x2F;push-order-servicecd $&amp;#123;searchPath&amp;#125;declare -i total&#x3D;&#96;ls push-order-service-qa-*.log | wc -l&#96;declare -i nums&#x3D;$total-">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-14T02:24:00.000Z">
+<meta property="article:modified_time" content="2022-03-14T02:27:04.917Z">
 <meta property="article:author" content="sunary">
+<meta property="article:tag" content="【瞎捣鼓】">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://sunary.site/m-hexo-blog/tags/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91/index.html">
+  <link rel="canonical" href="http://sunary.site/m-hexo-blog/2022/03/14/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91%E6%97%A5%E5%BF%97%E8%87%AA%E5%8A%A8%E6%B8%85%E9%99%A4%E8%84%9A%E6%9C%AC/index.html">
   
     <link rel="alternate" href="/atom.xml" title="写代码的厨子" type="application/atom+xml">
   
@@ -334,56 +339,195 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签: 【代码优化】</h1>
-      <p class="text-muted hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/m-hexo-blog/tags">All</a></li>
-          
-          <li><a href="/m-hexo-blog/tags/【瞎捣鼓】/">【瞎捣鼓】</a></li>
-          
-          <li><a href="/m-hexo-blog/tags/【代码优化】/">【代码优化】</a></li>
-          
-          <li><a href="/m-hexo-blog/tags/Music分享/">Music分享</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="row">
-        
-<div class="col-md-6">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-【技术-瞎捣鼓】日志自动清除脚本" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2022-03-08T10:11:27.000Z" itemprop="datePublished">2022-03-08</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/">if-else优化方案</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/m-hexo-blog/tags/%E3%80%90%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91/" class="label label-default mb">【代码优化】</a>
-     
-     
-   </div>
-   
-</article>
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      日志自动清除脚本
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/m-hexo-blog/2022/03/14/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91%E6%97%A5%E5%BF%97%E8%87%AA%E5%8A%A8%E6%B8%85%E9%99%A4%E8%84%9A%E6%9C%AC/" class="article-date">
+	  <time datetime="2022-03-14T02:24:00.000Z" itemprop="datePublished">2022-03-14</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/m-hexo-blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/m-hexo-blog/tags/%E3%80%90%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91/" rel="tag">【瞎捣鼓】</a>
+  </span>
 
 
-</div>
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/m-hexo-blog/2022/03/14/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91%E6%97%A5%E5%BF%97%E8%87%AA%E5%8A%A8%E6%B8%85%E9%99%A4%E8%84%9A%E6%9C%AC/#comments" class="article-comment-link">评论</a></span>
+        
       </div>
     </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <blockquote>
+<p>1、编辑sh脚本</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">searchPath=/home/catherine/data/logs/push-order-service</span><br><span class="line">cd $&#123;searchPath&#125;</span><br><span class="line"></span><br><span class="line">declare -i total=`ls push-order-service-qa-*.log | wc -l`</span><br><span class="line">declare -i nums=$total-7</span><br><span class="line"></span><br><span class="line">if [ &quot;$&#123;nums&#125;&quot; -ge 1 ];then</span><br><span class="line">    rm -rf `ls -tr push-order-service-qa-*.log | head -$&#123;nums&#125;`</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2、给脚本执行权限</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -x /Users/yu.sun/clear-log.sh</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>3、编辑crontab任务</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#编辑crontab列表</span><br><span class="line">&gt; crontab -e </span><br><span class="line"></span><br><span class="line">命令如下：（每天凌晨一点运行脚本）</span><br><span class="line">&gt; 00 01 * * * /Users/yu.sun/clear-log.sh</span><br><span class="line"></span><br><span class="line">#重启crontab 服务</span><br><span class="line">&gt; service crond restart</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://sunary.site/m-hexo-blog/2022/03/14/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91%E6%97%A5%E5%BF%97%E8%87%AA%E5%8A%A8%E6%B8%85%E9%99%A4%E8%84%9A%E6%9C%AC/" title="日志自动清除脚本" target="_blank" rel="external">http://sunary.site/m-hexo-blog/2022/03/14/【技术-瞎捣鼓】日志自动清除脚本/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/M-sunary" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/m-hexo-blog/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/M-sunary" target="_blank"><span class="text-dark">写代码的厨子👨‍🍳</span><small class="ml-1x">Coder &amp; Baby&#39;s Father</small></a></h3>
+        <div>每一个不曾起舞的日子,都是对生命的辜负.</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/m-hexo-blog/2022/03/14/%E3%80%90%E6%8A%80%E6%9C%AF-%E7%9E%8E%E6%8D%A3%E9%BC%93%E3%80%91Java%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/" title="Java服务启动脚本"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/m-hexo-blog/2022/03/08/%E3%80%90%E6%8A%80%E6%9C%AF-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96%E3%80%91if-else%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" title="if-else优化方案"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/m-hexo-blog/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/m-hexo-blog/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -438,6 +582,39 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
